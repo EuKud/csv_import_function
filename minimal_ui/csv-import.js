@@ -1,7 +1,11 @@
+// Select DOM elements
 const form = document.getElementById('import-form');
 const response = document.getElementById('response');
+
+// Maximum allowed file size for upload (1 MB)
 const MAX_FILE_SIZE = 1024 * 1024;
 
+// Messages to show for different situations
 const messages = {
     success: "Import successful.",
     noFile: "No file selected",
@@ -16,6 +20,7 @@ const messages = {
     nullValue: "NULL values found in records."
 };
 
+// Regular expressions to check file names for errors
 const validationPatterns = {
     empty: messages.noData,
     missing_column: messages.missingColumn,
@@ -26,12 +31,23 @@ const validationPatterns = {
     null_value: messages.nullValue
 };
 
+/**
+ * Displays a response message to the user.
+ * Changes the color of the message based on whether it's a success or error.
+ * @param {string} message - The message to display.
+ */
 function displayResponse(message){
     response.textContent = message;
 
-    response.style.color = message !== messages[0] ? "red" : "green";
+    response.style.color = message !== messages.success ? "red" : "green";
 }
 
+/**
+ * Validate the selected file.
+ * Checks if the file exists, if it's a CSV, and if the size is acceptable.
+ * @param {File} file - The file to be valideted.
+ * @returns {boolean} - Returns true if the file is valid, false otherwise.
+ */
 function validateFile(file){
     if (!file) {
         displayResponse(messages.noFile);
@@ -51,7 +67,14 @@ function validateFile(file){
     return true;
 }
 
+/**
+ * Validates the file data based on the file name.
+ * Checks if the file name has any errors and shows the appropriate message.
+ * @param {string} fileName - The name of the file to be validated.
+ * @returns {boolean} - Returns true if the data is valid, false otherwise.
+ */
 function validateData(fileName) {
+    // Loop through all validation patterns and check if any pattern matches the file name
     for (const [pattern, message] of Object.entries(validationPatterns)) {
         if (new RegExp(pattern).test(fileName)) {
             displayResponse(message);
@@ -63,8 +86,13 @@ function validateData(fileName) {
     return true;
 }
 
+/**
+ * Handle the form submission event.
+ * Prevents the default form submission and validates the file.
+ * @param {Event} event - The submit event triggered when the form is submitted.
+ */
 form.addEventListener('submit', (event) => {
-    event.preventDefault();
+    event.preventDefault(); // Prevent the page from reloading when the form is submitted
 
     const fileInput = document.getElementById('csv-import');
     const file = fileInput.files[0];
