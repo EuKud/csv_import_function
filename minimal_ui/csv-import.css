@@ -1,0 +1,24 @@
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 50px;
+}
+
+#csv-upload{
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+#submit-button{
+    height: 30px;
+    width: 100px;
+    font-weight: bold;
+    background-color: #007167;
+    color: white;
+    border: 1px solid black;
+}
+
+#response{
+    margin-top: 20px;
+    font-weight: bold;
+}
+
