@@ -2,7 +2,8 @@
   "name": "testautomation",
   "version": "1.0.0",
   "scripts": {
-    "cy:open": "cypress open"
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "devDependencies": {
     "cypress": "^13.15.2"
