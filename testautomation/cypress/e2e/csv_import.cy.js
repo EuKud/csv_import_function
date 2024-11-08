@@ -1,6 +1,4 @@
 describe('CSV Import Function', () => {
-  const prefixFilePath = 'cypress/fixtures/';
-
   // Messages to show for different situations
   const messages = {
     noFile: "No file selected",
