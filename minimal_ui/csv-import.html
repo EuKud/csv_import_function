@@ -8,13 +8,13 @@
 </head>
 <body>
     <h1>CSV Data Import</h1>
-    <form id="import-form">
+    <form id="import-form" method="POST">
         <p>Select your .csv-file</p>
         <input type="file" id="csv-import"/>
         <br>
         <button type="submit" id="submit-button">Import</button>
     </form>
-    <div id="response"></div>
+    <div id="messageField"></div>
 
     <script src="csv-import.js"></script>
 </body>
