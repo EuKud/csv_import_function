@@ -1,0 +1,11 @@
+Measurement_ID,Device_ID,Device_Name,Timestamp,Temperature_C,Location
+M0001,D001,Incubator,2024-11-07 08:00,37.5,Lab A
+M0002,D001,Incubator,2024-11-07 12:00,37.2,Lab A
+M0003,D002,Centrifuge,2024-11-07 08:00,25.0,Lab B
+M0004,D002,Centrifuge,2024-11-07 12:00,24.7,Lab B
+M0005,D003,Freezer,2024-11-07 08:00,-20.0,Lab A
+M0006,D003,Freezer,2024-11-07 12:00,-19.8,Lab A
+M0007,D004,Water Bath,2024-11-07 08:00,50.0,Lab C
+M0008,D004,Water Bath,2024-11-07 12:00,50.2,Lab C
+M0009,D005,Thermocycler,2024-11-07 08:00,95.0,Lab D
+M0010,D005,Thermocycler,2024-11-07 12:00,94.8,Lab D
