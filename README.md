@@ -75,4 +75,3 @@ The tests cover different scenarios for the CSV import function, such as:
 ## Additional Notes
 
 - Make sure the web server is running on port 8080 before starting the tests.
-- The `cy:open` command requires an internet connection to install Cypress dependencies if they are not already installed.
