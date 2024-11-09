@@ -5,10 +5,10 @@ This project contains automated tests for the CSV import feature in a web applic
 
 Make sure you have installed:
 
-- [`Node.js`](https://nodejs.org/) version 20.14.0
+- [`Node.js`](https://nodejs.org/) version 22.11.0
 - [`npm`](https://www.npmjs.com/) version 10.8.1
 - [`Cypress`](https://www.cypress.io/) version 13.15.2 (will install automatically with `npm install`)
-- [`http-server`](https://www.npmjs.com/package/http-server) version 14.1.1 (to run a local server for the UI)
+- [`http-server`](https://www.npmjs.com/package/http-server) version 14.1.1 (will install automatically with `npm install`)
 
 ## Project Setup
 
